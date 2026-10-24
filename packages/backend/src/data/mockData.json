@@ -1,0 +1,64 @@
+{
+  "courses": [
+    {
+      "id": "solana-fundamentals",
+      "title": "Solana Fundamentals",
+      "creatorWallet": "9xQeWvG816bESvAn69vQu6vDFFf5573xU9XN2wKvZ9bZ",
+      "levels": [
+        {
+          "id": "solana-accounts",
+          "levelNumber": 1,
+          "title": "Solana Accounts",
+          "isFree": true,
+          "cards": [
+            {
+              "id": "accounts-explanation",
+              "type": "EXPLANATION",
+              "title": "Where Solana stores state",
+              "content": {
+                "body": "Solana programs store persistent state in accounts. Programs define how their accounts may be read or changed."
+              }
+            },
+            {
+              "id": "accounts-quiz",
+              "type": "POPUP_QUIZ",
+              "title": "Where does persistent Solana state live?",
+              "content": {
+                "options": ["Inside an account", "Only in a browser cache"],
+                "correctOptionIndex": 0,
+                "feedback": "Accounts hold on-chain state."
+              }
+            }
+          ]
+        },
+        {
+          "id": "rent-exempt-storage",
+          "levelNumber": 2,
+          "title": "Rent-Exempt Storage",
+          "isFree": false,
+          "x402CostUSDC": "0.02",
+          "cards": [
+            {
+              "id": "rent-explanation",
+              "type": "EXPLANATION",
+              "title": "Rent-exempt minimum balance",
+              "content": {
+                "body": "Accounts generally need a minimum lamport balance based on their data size to be rent-exempt."
+              }
+            },
+            {
+              "id": "rent-drag-drop",
+              "type": "DRAG_DROP",
+              "title": "Match the concept",
+              "content": {
+                "items": ["Account data size", "Rent-exempt minimum"],
+                "targets": ["A factor used to calculate the minimum balance", "The minimum balance for rent exemption"],
+                "matches": [[0, 0], [1, 1]]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "questory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Questory — AI-powered interactive learning with Solana x402 payments",
+  "workspaces": ["apps/web", "packages/backend"],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,green \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace packages/backend run dev",
+    "build": "npm run build:api && npm run build:web",
+    "build:api": "npm --workspace packages/backend run build",
+    "build:web": "npm --workspace apps/web run build",
+    "typecheck": "npm run typecheck:api && npm run typecheck:web",
+    "typecheck:api": "npm --workspace packages/backend run typecheck",
+    "typecheck:web": "npm --workspace apps/web run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
