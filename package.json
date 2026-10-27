@@ -15,6 +15,9 @@
     "typecheck:api": "npm --workspace packages/backend run typecheck",
     "typecheck:web": "npm --workspace apps/web run typecheck"
   },
+  "dependencies": {
+  "react-dom": "^19.3.1"
+},
   "devDependencies": {
     "concurrently": "^9.1.2",
     "typescript": "^5.7.3"
